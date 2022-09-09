@@ -1,0 +1,835 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: noen;
+    box-sizing: border-box;
+    font-family: 'Anek Telugu', sans-serif;
+}
+
+body {
+    background-color: #1e293b;
+}
+
+
+
+/* h2 {
+    font-family: 'Anek Telugu', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #cbd5e1;
+}
+
+label {
+    font-family: 'Anek Telugu', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+input {
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #94a3b8;
+    padding: 0.5rem;
+    font-family: 'Anek Telugu', sans-serif;
+    color: #94a3b8;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+button {
+    flex: 1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Anek Telugu', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+form {
+    min-height: 22rem;
+    height: 100%;
+    background-color: #334155;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #2563eb;
+} */
+
+
+
+/*------------------------------- navbar start -------------------------------*/
+.navbar {
+    min-height: 3rem;
+    background-color: #334155;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-title {
+    max-width: 1017px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #cbd5e1;
+    padding: 0 1.5rem;
+}
+
+.navbar-title span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2.5px solid #cbd5e1;
+    background-color: #64748b;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+/*------------------------------- navbar end -------------------------------*/
+
+
+.container {
+    max-width: 778px;
+    width: 100%;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+
+/*------------------------------- add category start -------------------------------*/
+.added-massage {
+    width:50%;
+    height: 3rem;
+    background-color: #f0fdf4;
+    margin-bottom: 1rem;
+    border-left: 4px solid #22c55e;
+    border-radius: 4px 8px 8px 4px;
+    color: #22c55e;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    transition: all 0.5s ease-in-out;
+    transform: translateX(-200%);
+    opacity: 1;
+}
+
+.add-category-form-bg {
+    width: 100vw;
+    height: 100vh;
+    background-color: #64748bc0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    z-index: 2;
+}
+
+.add-category-form-bg h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #e2e8f0;
+    text-align: center;
+}
+
+.add-category-form {
+    max-width: 45rem;
+    width: 100%;
+    height: fit-content;
+    display: none;
+    flex-direction: column;
+    border: 1px solid #64748b;
+    background-color: #334155;
+    border-radius: 15px;
+    padding: 1.5rem 2rem 2rem 2rem;
+    position: fixed;
+    top: 20%;
+    box-shadow: 1px 1px 15px #64748b;
+}
+
+.add-category-form label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+.add-category-form input {
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #94a3b8;
+    padding: 0.5rem;
+    color: #94a3b8;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.new-category-btns {
+    height: 2.2rem;
+    margin-top: 3.5rem;
+    display: flex;
+    font-weight: 500;
+}
+
+.cancel-btn {
+    flex: 1;
+    margin-right: 1rem;
+    background-color: transparent;
+    border: 1px solid #94a3b8;
+    color: #94a3b8;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background-color: #ef4444;
+    border-color: #ef4444;
+    color: #e2e8f0;
+}
+
+.add-category-btn {
+    flex: 1;
+    background-color: #64748b;
+    color: #e2e8f0;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.add-category-btn:hover {
+    background-color: #94a3b8;
+    color: #334155;
+}
+
+.category-input-error {
+    display: none;
+    margin-top: 1.5rem;
+    color: #ef4444;
+    font-size: 1rem;
+}
+
+/*------------------------------- add category end -------------------------------*/
+
+
+/*------------------------------- add product start -------------------------------*/
+.add-product {
+    margin-bottom: 4rem;
+}
+
+.add-product h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.add-product form {
+    min-height: 22rem;
+    height: 100%;
+    background-color: #334155;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.new-product-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.new-product-detail label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+.new-product-detail input {
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #94a3b8;
+    padding: 0.5rem;
+    font-family: 'Anek Telugu', sans-serif;
+    color: #94a3b8;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0.5rem 0 1.5rem 0.5rem;
+}
+
+.product-category-container {
+    display: flex;
+    align-items: center;
+}
+
+#product-category {
+    flex: 1;
+    min-height: 2.5rem;
+    border-radius: 10px;
+    background-color: #334155;
+    border: 1px solid #94a3b8;
+    margin: 0.5rem 0 0 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Anek Telugu', sans-serif;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+#product-category option {
+    background-color: #475569;
+    color: #94a3b8;
+}
+
+.toggle-add-category {
+    color: #64748b;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.toggle-add-category:hover {
+    color: #94a3b8;
+}
+
+.toggle-add-category:hover::after {
+    content: "Add new category !";
+    width: 7.5rem;
+    height: 1rem;
+    padding: 0.2rem;
+    font-family: 'Anek Telugu', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background-color: #64748bba;
+    border: 1px solid #94a3b8;
+    border-radius: 5px;
+    color: #94a3b8;
+    position: absolute;
+    top: -25px;
+    right: -45px;
+    text-align: center;
+}
+
+.add-product-btn {
+    min-height: 2.5rem;
+    background-color: #64748b;
+    color: #e2e8f0;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 2.5rem;
+}
+
+.add-product-btn:hover {
+    background-color: #94a3b8;
+    color: #334155;
+}
+
+.product-input-error {
+    display: none;
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+    color: #ef4444;
+    font-size: 1.1rem;
+}
+
+/*------------------------------- add product end -------------------------------*/
+
+
+
+/*------------------------------- products list start -------------------------------*/
+.product-list-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #94a3b8;
+    margin-bottom: 1rem;
+}
+
+.product-list {
+    border: 1px solid #64748b;
+    background-color: #64748b1f;
+    border-radius: 14px;
+    padding: 2.5rem;
+    margin-top: 1rem;
+
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.filter label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.sort-box {
+    flex: 0.7;
+    display: flex;
+    align-items: center;
+}
+
+#sort {
+    flex: 1;
+    min-height: 2.5rem;
+    background-color: #64748b1f;
+    margin-left: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #94a3b8;
+    padding: 0.5rem;
+    font-family: 'Anek Telugu', sans-serif;
+    color: #94a3b8;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+#sort option {
+    background-color: #475569;
+    color: #94a3b8;
+}
+
+#search {
+    flex: 0.8;
+    margin-left: 0.5rem;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #94a3b8;
+    padding: 0.5rem;
+    font-family: 'Anek Telugu', sans-serif;
+    color: #94a3b8;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.product-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #94a3b8;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #cbd5e1;
+}
+
+.product-item-details {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-column-gap: 1rem;
+    font-size: 1rem;
+
+}
+
+.date {
+    font-weight: 300;
+}
+
+.product-item-details .sort {
+    border: 1px solid #cbd5e1;
+    color: #cbd5e1;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.2rem 1rem 0 1rem;
+}
+
+
+.product-item-details .number {
+    width: 20px;
+    max-height: 20px;
+    border-radius: 50%;
+    border: 1px solid #cbd5e1;
+    background-color: #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+i {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.menu-icon {
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+    background-color: #64748b32;
+}
+
+/*------------------------------- products list end -------------------------------*/
+
+
+/*------------------------------- menu list start -------------------------------*/
+.display {
+    display: none;
+}
+
+.menu-list {
+    width: 4rem;
+    border: 1px solid #cbd5e176;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -64px;
+    right: -38px;
+    background-color: #3b4453;
+    overflow: hidden;
+}
+
+.menu-item {
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit:hover {
+    background-color: #5f6a7b7d;
+}
+
+.delete {
+    color: #ff3535;
+}
+
+.delete:hover {
+    background-color: #ff35351b;
+    color: red;
+}
+
+/*------------------------------- menu list end -------------------------------*/
+
+
+/*------------------------------- edit form start -------------------------------*/
+.edit-form-bg {
+    width: 100vw;
+    height: 100vh;
+    background-color: #64748bc0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    padding: 3rem;
+    z-index: 2;
+}
+
+.edit-form-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #e2e8f0;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.edit-form {
+    max-width: 45rem;
+    width: 100%;
+    height: fit-content;
+    display: none;
+    flex-direction: column;
+    border: 1px solid #64748b;
+    background-color: #334155;
+    border-radius: 15px;
+    padding: 1.5rem 4rem 2rem 4rem;
+    position: fixed;
+    top: 10%;
+    box-shadow: 1px 1px 15px #64748b;
+}
+
+
+.item-title {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #898d92;
+    padding: 0rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0;
+    font-size: 1.3rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+
+.item-title:focus {
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-color: #2563eb;
+}
+
+.item-details {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.item-details label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.item-details input {
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #94a3b8;
+    padding: 0.5rem;
+    color: #94a3b8;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.item-category {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#item-category {
+    width: 100%;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #94a3b8;
+    padding: 0.5rem;
+    color: #94a3b8;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.item-quantity {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#item-quantity {
+    width: 100%;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid #898d9286;
+}
+
+#item-quantity:focus {
+    border-color: #2563eb;
+}
+
+.item-update-date {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #cbd5e1;
+}
+
+.item-update-date .edit-form-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+.edit-form-btns {
+    min-height: 2.2rem;
+    width: 100%;
+    display: flex;
+}
+
+.save-edits-btn {
+    flex: 1;
+    background-color: #64748b;
+    color: #e2e8f0;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.save-edits-btn:hover {
+    background-color: #94a3b8;
+    color: #334155;
+}
+
+.cancel-edits-btn {
+    flex: 1;
+    margin-right: 1rem;
+    background-color: transparent;
+    border: 1px solid #94a3b8;
+    color: #94a3b8;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cancel-edits-btn:hover {
+    background-color: #ef4444;
+    border-color: #ef4444;
+    color: #e2e8f0;
+}
+
+
+/*------------------------------- edit form end -------------------------------*/
+
+@media screen and (max-width : 650px) {
+    .navbar-title {
+        font-size: 0.9rem;
+    }
+
+    .filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-box {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    .sort-box {
+        width: 100%;
+        margin-top: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #sort {
+        width: 100%;
+    }
+
+    .product-item-details {
+        font-size: 0.9em;
+    }
+
+    .product-item-details {
+        grid-column-gap: 0.7em;
+    }
+
+    .add-category-form {
+        max-width: 30rem;
+    }
+
+    .edit-form {
+        max-width: 32rem;
+        width: 100%;
+    }
+
+    .added-category-massage {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width :410px) {
+    .edit-form {
+       max-width: 25rem;
+        padding: 2rem;
+    }
+
+    .navbar-title {
+        font-size: 0.7rem;
+    }
+
+    .add-category-form {
+        max-width: 22rem;
+    }
+    .added-category-massage {
+        width: 100%;
+    }
+}
+
+
+input:focus {
+    outline: none;
+    border: 1px solid #2563eb;
+}
+
+@media screen and (max-width : 350px) {
+    .navbar-title {
+        font-size: 0.8rem;
+    }
+
+    .product-item-title {
+        border-right: 1px solid white;
+        padding-right: 0.5rem;
+    }
+
+    .number {
+        width: 15px;
+        height: 15px;
+    }
+}

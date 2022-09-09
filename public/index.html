@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bahar Eshghi">
+    <link rel="stylesheet" href="/src/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Inventory</title>
+</head>
+
+<body>
+    <!----------------------- navbar star----------------------->
+    <nav class="navbar">
+        <div class="navbar-title">
+            <h1>Inventory App</h1>
+            <span class="products-number">0</span>
+        </div>
+    </nav>
+    <!----------------------- navbar end ----------------------->
+
+
+
+    <!----------------------- content start ----------------------->
+    <div class="container">
+        <div class="added-massage"></div>
+
+        <!----------------------- add category start----------------------->
+        <div class="add-category-form-bg">
+
+            <form class="add-category-form">
+                <h2 class="add-category-form-title">Add Category</h2>
+
+                    <label for="category-title">Title :</label>
+                    <input type="text" id="category-title" placeholder="category title...">
+
+                <p class="category-input-error">Please enter the title and description!</p>
+
+                <div class="new-category-btns">
+                    <button class="cancel-btn">Cancel</button>
+                    <button class="add-category-btn">Add New Category</button>
+                </div>
+
+            </form>
+
+        </div>
+        <!----------------------- add category end ----------------------->
+
+
+        <!-----------------------add product start ----------------------->
+        <section class="add-product">
+            <h2>Add New Product :</h2>
+            <form>
+                <div class="new-product-detail">
+                    <label for="product-title">Title :</label>
+                    <input type="text" id="product-title" placeholder="product title...">
+
+                    <label for="product-quantity">Quantity :</label>
+                    <input type="number" id="product-quantity" placeholder="product quantity..."></input>
+
+                    <label for="product-category">Category :</label>
+                    <div class="product-category-container">
+                        <select name="product-category" id="product-category">
+                            <option value="defaule" disabled>Select a category :</option>
+                        </select>
+                        <i class="toggle-add-category fa-solid fa-square-plus"></i>
+                    </div>
+                </div>
+                <p class="product-input-error">Please enter the title , quantiry and category!</p>
+                <button class="add-product-btn">Add New Product</button>
+            </form>
+        </section>
+        <!----------------------- add product end ----------------------->
+
+
+        <!----------------------- products list start ----------------------->
+        <h2 class="product-list-title">Product List :</h2>
+        <section class="product-list">
+            <div class="filter">
+                <div class="search-box">
+                    <label for="search">Search :</label>
+                    <input type="text" id="search" placeholder="search-product">
+                </div>
+
+                <div class="sort-box">
+                    <label for="sort">Sort by :</label>
+                    <select name="sort" id="sort">
+                        <option value="newest">newest</option>
+                        <option value="oldest">oldest</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products">
+                <!-- <div class="product-item">
+                    <span class="product-item-title">test</span>
+                    
+                    <div class="product-item-details">
+                        <span class="date">9/8/2022</span>
+                        <spna class="sort">frontend</spna>
+                        <span class="number">2</span>
+                        <i class="menu-icon fa-solid fa-ellipsis-vertical" data-id="${product.id}">
+                            <div class="display">
+                                <span class="menu-item edit">Edit</span>
+                                <span class="menu-item delete">Delete</span>
+                            </div>
+                        </i>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <!----------------------- product list end ----------------------->
+
+
+        <!----------------------- edit product form start----------------------->
+        <div class="edit-form-bg">
+            <form class="edit-form">
+                <h3 class="edit-form-title">Edit Product</h3>
+                <input type="text" class="item-title" value="" autofocu>
+
+                <div class="item-details">
+                    <label for="item-quantity" class="item-quantity">Quantity :
+                        <input type="number" id="item-quantity" value="">
+                    </label>
+
+                    <label for="item-category" class="item-category">Category :
+                        <select type="text" id="item-category"></select>
+                    </label>
+
+                    <span class="item-update-date">
+                        <span class="edit-form-title">Update date :</span>
+                        <span class="edit-form-date"></span>
+                    </span>
+                </div>
+
+                <div class="edit-form-btns">
+                    <button class="cancel-edits-btn">Cancel</button>
+                    <button class="save-edits-btn">Save</button>
+                </div>
+            </form>
+        </div>
+        <!----------------------- edit product form end ----------------------->
+    </div>
+    <!----------------------- content end ----------------------->
+
+    <script src="/src/js/app.js" type="module"></script>
+</body>
+
+</html>
